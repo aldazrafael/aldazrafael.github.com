@@ -59,3 +59,4 @@ iconos.forEach(function(icono){
   icono.classList.remove("fa-star");
 })
 */
+/**/
