@@ -3,7 +3,34 @@ Rosa: #C6426E
 Morado: #642B73
 Negro: #999
 Gris: #f5f5f5
+Rosa: ;#d500f9
 */
+html{
+	font-family: 'Nunito', sans-serif;
+}
+
+img{
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+	color: #d500f9;
+}
+
+a:hover{
+	opacity: 0.7;
+}
+
+a:focus{
+	background-color: red;
+}
+
+.title{
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
 .container{
 	background: #642B73; /*Respaldo*/
 	background: #bc4e9c;  /* fallback for old browsers */
@@ -19,23 +46,121 @@ Gris: #f5f5f5
 
 .content{
 	max-width: 960px;
-	max-height: 500px;
 	width: 100%;
-	height: 100%;
-	background-color: #fff;
-}
-.red{
-	height: 200px;
-	width: 100px;
-	background-color: red;
-}
-
-
-#boton-pago{
-	background-color: yellow;
+	height: 80vh;
+	background-color: white;
+	/*box-shadow: diferenciaHorizontal diferenciaVertical desenfoque amplitud color;*/
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	border-radius: 4px;
+	position: relative;
+	overflow: scroll;
 }
 
-
+	.content{
+		padding: 1em;
+	}
 td{
-	border: solid 1px;
+	display: block;
+	width: 100px;
 }
+td:nth-of-type(1){
+	font-size: 1.5em;
+	font-weight: bold;
+	color:#642B73;
+}
+th{
+	display: none;
+ }
+
+.actions{
+	position: absolute;
+	top: 1em;
+	right: 1em;
+}
+
+.close{
+	height: 40px;
+	width: 40px;
+	color:white; /*color de fuente*/
+	border-radius: 50%; /*min 50% para comenzar a redondear*/
+	background-color: #642B73; 
+	display: inline-block; /*para que respete las medidas*/
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	font-weight: 300; /*grosor de fuente*/
+	cursor: pointer; /*cuando pase el mouse cambie a manito*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.paragraph{
+	line-height: 1.8em;
+	font-weight: 300;
+}
+
+.fa-star{
+	color: #ffc400;
+}
+
+.table{
+	width: 100%;
+	border-spacing: 0;
+}
+
+.table td, .table th {
+	padding: 1em;
+	text-align: left;
+}
+
+.table tr:nth-child(even){background-color: #f3e5f5;}
+
+.title-item{
+	font-size: 2em;
+	border-bottom: solid 2px #C6426E;
+	padding-bottom: 1em; /*relleno de la caja*/
+}
+
+.address{
+	font-weight: bold;
+	color:#642B73;
+	font-size: 1.2em;
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+	display: inline-block;
+}
+.main-image{
+	float: left; /*el texto fluye a la derecha*/
+	margin-right: 1em; /*da margen entre img y texto*/
+	height: 250px; /*altura de la imagen*/
+
+}
+
+.position{
+	background-color: #C6426E;
+	color: white;
+	padding: 0.5em;
+	border-radius: 4px;
+	margin-right: : 0.5em;
+
+	}	
+
+@media(min-width: 900px){
+	th{
+		display: table-cell;
+	}
+	td{
+		width: auto;
+		display: table-cell;
+	}
+	td:nth-of-type(1){
+		font-size: 1em;
+	}
+	.content{
+		padding: 1.8em;
+	}
+}
+	@media (min-height:550px; ){
+		.content{
+			height: 500px;
+		}
+	}
